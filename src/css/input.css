@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-    --color-azul-claro: #37bcf9;
-    --color-azul-oscuro: #0370b9;
-}
-
 @layer base {
     /*body{
         background-image: url('../img/pattern.png');
@@ -58,3 +53,37 @@
         @apply block transition duration-200 hover:text-azul-claro transform hover:scale-125
     }
 }
+
+@theme {
+    --color-azul-claro: #37bcf9;
+    --color-azul-oscuro: #0370b9;
+
+    --animate-spin-low: spin 2s linear infinite;
+    --animate-from-below: fromBelow 500ms linear;
+    --animate-from-right: fromRigth 300ms linear;
+}
+
+@keyframes fromBelow {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(20%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fromRigth {
+    0% {
+        transform: translateX(200%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
