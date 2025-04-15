@@ -2,7 +2,7 @@
 
 @layer base {
     /*body{
-        background-image: url('../img/pattern.png');
+        background-image: url('../img/bakbaner.png');
     }*/
 
     /* FUENTES */
@@ -46,33 +46,30 @@
 
 @layer components {
     .menu-item {
-        @apply 
-            mr-5
-            ml-5
-            tracking-wider
-            flex-none
-            max-md:flex-1
-        ;
+        @apply mr-5 ml-5 tracking-wider flex-none max-md:flex-1;
     }
 
     .menu-item-a {
-        @apply
-            block
-            transition
-            duration-200
-            hover:text-azul-claro
-            transform hover:scale-125
-        ;
+        @apply block transition duration-200 hover:text-azul-claro transform hover:scale-125;
     }
+
+
 }
 
 @theme {
     --color-azul-claro: #37bcf9;
     --color-azul-oscuro: #0370b9;
 
+    --text-shadow-banner: 2px 2px 1x black;
+
     --animate-spin-low: spin 2s linear infinite;
     --animate-from-below: fromBelow 500ms linear;
     --animate-from-right: fromRigth 300ms linear;
+    --animate-bg-banner: backBanner 10s linear;
+    --animate-text-banner: showBannerText 10s linear;
+
+    --background-image-banner: url('../img/bakbaner.png');
+    --background-position-banner: -200px -200px;
 }
 
 @keyframes fromBelow {
@@ -99,3 +96,38 @@
     }
 }
 
+@keyframes backBanner {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    100% {
+        background-position: -200px -200px;
+    }
+}
+
+@keyframes showBannerText {
+    0% {
+        transform: translateX(-600%) scale(5, 5);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(600%) scale(5, 5);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateX(-600%) scale(5, 5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%) scale(1, 1);
+        text-shadow: 2px 2px 1px black;
+        color: white;
+        opacity: 1;
+    }
+}
