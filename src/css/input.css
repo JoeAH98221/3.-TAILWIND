@@ -46,14 +46,119 @@
 
 @layer components {
     .menu-item {
-        @apply mr-5 ml-5 tracking-wider flex-none max-md:flex-1;
+        @apply
+            mr-5
+            ml-5
+            tracking-wider
+            flex-none
+            max-md:flex-1
+        ;
     }
 
     .menu-item-a {
-        @apply block transition duration-200 hover:text-azul-claro transform hover:scale-125;
+        @apply
+            block
+            transition
+            duration-200
+            hover:text-azul-claro
+            transform
+            hover:scale-125
+        ;
     }
 
+    .card{
+        @apply
+            flex-1
+            h-80
+            border-2
+            border-gray-200
+            shadow-md
+            bg-white
+            overflow-hidden
+            m-5
+            mt-10
+            pl-5
+            pr-5
+            cursor-pointer
+            transition
+            duration-300
+            max-md:h-40
+            max-md:m-2
+            md:h-40
+            md:m-2
+            lg:h-80
+            lg:m-5
+            hover:bg-black
+        ;
+    }
 
+    .card-icon{
+        font-family: "WebSymbolsRegular";
+        @apply
+            block
+            pt-5
+            w-full
+            h-32
+            text-5xl
+            text-center
+            mt-12
+            mx-auto
+            transition
+            duration-300
+            max-md:mt-3
+            max-md:h-20
+            md:mt-3
+            md:h-20
+            lg:mt-12
+            lg:h-32
+            transform
+            group-hover:scale-130
+            group-hover:text-7xl
+            group-hover:text-azul-claro
+            group-hover:animate-show-card-icon
+        ;
+    }
+
+    .card-category{
+        font-family: "TrebuchetMS";
+        @apply
+            w-full
+            h-12
+            text-xl
+            font-bold
+            text-center
+            text-azul-oscuro
+            transition
+            duration-300
+            max-md:text-base
+            max-md:h-6
+            md:text-base
+            md:h-6
+            lg:text-lg
+            lg:h-12
+            group-hover:text-white
+            group-hover:animate-show-card-category
+    }
+
+    .card-description{
+        font-family: "TrebuchetMS";
+        @apply
+            text-center
+            text-azul-oscuro
+            text-base
+            transition
+            duration-300
+            max-md:hidden
+            md:hidden
+            lg:block
+            lg:text-sm
+            lg:mt-1.5
+            xl:text-base
+            xl:mt-1
+            group-hover:text-white
+            group-hover:animate-show-card-description
+        ;
+    }
 }
 
 @theme {
@@ -67,6 +172,9 @@
     --animate-from-right: fromRigth 300ms linear;
     --animate-bg-banner: backBanner 10s linear;
     --animate-text-banner: showBannerText 10s linear;
+    --animate-show-card-icon: showCardIcon 300ms linear;
+    --animate-show-card-category: showCardCategory 400ms linear;
+    --animate-show-card-description: showCardDescription 400ms linear;
 
     --background-image-banner: url('../img/bakbaner.png');
     --background-position-banner: -200px -200px;
@@ -129,5 +237,35 @@
         text-shadow: 2px 2px 1px black;
         color: white;
         opacity: 1;
+    }
+}
+
+@keyframes showCardIcon {
+    from{
+        transform: translateY(-200%);
+    }
+
+    to {
+        transform: translateY(0%);       
+    }
+}
+
+@keyframes showCardCategory {
+    from{
+        transform: translateY(-300%);
+    }
+
+    to {
+        transform: translateY(0%);       
+    }
+}
+
+@keyframes showCardDescription {
+    from{
+        transform: translateX(-300%);
+    }
+
+    to {
+        transform: translateX(0%);       
     }
 }
