@@ -201,37 +201,65 @@
             flex-none
             w-72
             min-h-full
-            mt-5
-            
         ">
-            <h3>BUSCAR</h3>
-            <div id="search">
+            <h3 class="aside-header">BUSCAR</h3>
+            <div id="search" class="
+                w-11/12
+                h-7
+                m-2.5
+                mx-auto
+                bg-white
+                border
+                border-gray-200
+                rounded
+                shadow-inner
+            ">
                 <form>
-                    <input type="text" />
-                    <input type="button" value="Buscar" />
+                    <input type="text" class="
+                        w-10/12
+                        h-6
+                        border-none
+                        pl-1.5
+                        rounded-md
+                        bg-transparent
+                        text-gray-400
+                        transition
+                        duration-300
+                        outline-none
+                        focus:outline-none
+                    "/>
+                    <input type="button" value="L" class="
+                        symbol
+                        h-6
+                        cursor-pointer
+                        text-base
+                        bg-transparent
+                        border-none
+                        text-gray-500
+                        pl-2
+                    "/>
                 </form>
             </div>
 
-            <h3>LOGIN</h3>
-
-            <div id="login">
+            <h3 class="aside-header">LOGIN</h3>
+            <div id="login" class="aside-box">
                 <form>
-                    <label>Usuario</label>
-                    <input type="email" id="email" />
+                    <label for="email" class="login-icon">U</label>
+                    <input type="email" id="email" class="login-input"/>
 
-                    <label>Contraseña</label>
-                    <input type="password" id="password" />
+                    <label for="password" class="login-icon text-xl ml-7 mt-6">w</label>
+                    <input type="password" id="password" class="login-input"/>
 
-                    <input type="submit" value="Iniciar Sesión">
-                    <input type="reset" value="Limpiar" />
+                    <input type="submit" value="Entrar" class="login-button"/>
+                    <input type="reset" value="Limpiar" class="login-button ml-1"/>
 
-                    <a href="#">Registrate aquí</a>
-                    <a href="#">¿Olvidaste tu contraseña?</a>
+                    <a href="#" class="login-link">Registrate aquí</a>
+                    <a href="#" class="login-link">¿Olvidaste tu contraseña?</a>
                 </form>
             </div>
 
-            <h3>REDES SOCIALES</h3>
-            <div>
+            <h3 class="aside-header">REDES SOCIALES</h3>
+            <div class="aside-box">
                 <div id="social-media">
                     <div class="x">
                         <a href="#">X</a>
@@ -252,8 +280,8 @@
                 </div>
             </div>
 
-            <h3>PATROCINADORES</h3>
-            <div>
+            <h3 class="aside-header">PATROCINADORES</h3>
+            <div class="aside-box">
                 <div id="sponsor">
                     <div class="sponsor1">
                         <a href="#">Patrocinador 1</a>
@@ -280,7 +308,7 @@
             flex-grow
             mr-10
         ">
-            <h2 class="articles-header shadow-header3D">Últimos articulos</h2>
+            <h2 class="articles-header">Últimos articulos</h2>
             <article class="article-items">
                 <div class="article-data">
                     <span>Fecha: 01 de Julio</span>

@@ -173,6 +173,7 @@
             tracking-widest
             pt-5
             border
+            shadow-header3D
         ;
     }
 
@@ -236,6 +237,102 @@
         ;
     }
 
+    .aside-header {
+        font-family: "BebasNeue";
+        background: url('../img/pxgray.png'), white; 
+        @apply
+            block
+            h-11
+            leading-10
+            text-3xl
+            font-medium
+            tracking-widest
+            pl-3.5
+            pt-1
+            mb-3.5
+            border
+            shadow-header3D
+        ;
+    }
+
+    .aside-box {
+        @apply
+            w-10/12
+            h-60
+            mt-5
+            mb-7
+            mx-auto
+            pt-1
+            shadow-box
+        ;
+    }
+
+    .login-icon {
+        font-family: "WebSymbolsRegular";
+        @apply
+            text-center
+            absolute
+            ml-7
+            mt-1
+            h-8
+        ;
+    }
+
+    .login-input{
+        @apply
+            block
+            mx-auto
+            mt-5
+            w-10/12
+            h-8
+            border
+            border-gray-300
+            shadow-inner
+            pl-7
+            rounded-md
+            text-gray-500
+            transition
+            duration-300
+            outline-none
+            focus:outline-none
+            focus:text-gray-600  
+        ;
+    }
+
+    .login-button {
+        font-family: font-light;
+        @apply
+            w-24
+            h-8
+            mt-5
+            ml-5
+            mb-5
+            text-center
+            text-white
+            text-base
+            
+            border
+            border-azul-oscuro
+            bg-gradient-to-b from-azul-claro to-azul-oscuro
+            rounded-none
+            cursor-pointer
+            transition
+            duration-300
+            hover:shadow-md
+        ;
+    }
+
+    .login-link {
+        @apply
+            block
+            ml-4
+            text-sm
+            text-gray-600
+            hover:underline
+            hover:text-azul-oscuro
+        ;
+    }
+
 }
 
 @theme {
@@ -243,6 +340,7 @@
     --color-azul-oscuro: #0370b9;
 
     --shadow-header3D: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+    --shadow-box: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3), 0px 1px white inset, 0px -3px 1px rgba(0, 0, 0, 0.3) inset;
     --text-shadow-banner: 2px 2px 1x black;
 
     --animate-spin-low: spin 2s linear infinite;
