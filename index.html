@@ -195,12 +195,14 @@
         </div>
     </section>
 
-    <main class="container w-11/12 mt-5 mx-auto flex flex-row">
+    <main class="container w-11/12 mt-5 mx-auto flex max-md:flex-col md:flex-row">
         <aside id="lateral" class="
             order-2    
             flex-none
             w-72
             min-h-full
+            max-md:w-full
+            max-md:m-0
         ">
             <h3 class="aside-header">BUSCAR</h3>
             <div id="search" class="
@@ -227,7 +229,7 @@
                         duration-300
                         outline-none
                         focus:outline-none
-                    "/>
+                    " />
                     <input type="button" value="L" class="
                         symbol
                         h-6
@@ -237,7 +239,7 @@
                         border-none
                         text-gray-500
                         pl-2
-                    "/>
+                    " />
                 </form>
             </div>
 
@@ -245,13 +247,13 @@
             <div id="login" class="aside-box">
                 <form>
                     <label for="email" class="login-icon">U</label>
-                    <input type="email" id="email" class="login-input"/>
+                    <input type="email" id="email" class="login-input" />
 
                     <label for="password" class="login-icon text-xl ml-7 mt-6">w</label>
-                    <input type="password" id="password" class="login-input"/>
+                    <input type="password" id="password" class="login-input" />
 
-                    <input type="submit" value="Entrar" class="login-button"/>
-                    <input type="reset" value="Limpiar" class="login-button ml-1"/>
+                    <input type="submit" value="Entrar" class="login-button" />
+                    <input type="reset" value="Limpiar" class="login-button ml-1" />
 
                     <a href="#" class="login-link">Registrate aquí</a>
                     <a href="#" class="login-link">¿Olvidaste tu contraseña?</a>
@@ -259,24 +261,18 @@
             </div>
 
             <h3 class="aside-header">REDES SOCIALES</h3>
-            <div class="aside-box">
-                <div id="social-media">
-                    <div class="x">
-                        <a href="#">X</a>
-                        <p>X</p>
-                    </div>
+            <div id="social-media" class="aside-box h-48">
+                <div class="group x">
+                    <a href="#" class="social-icon">t</a>
+                    <p class="social-overlay">X</p>
                 </div>
-                <div id="social-media">
-                    <div class="facebook">
-                        <a href="#">Facebook</a>
-                        <p>Facebook</p>
-                    </div>
+                <div class="group facebook">
+                    <a href="#" class="social-icon">f</a>
+                    <p class="social-overlay">Facebook</p>
                 </div>
-                <div id="social-media">
-                    <div class="youtube">
-                        <a href="#">YouTube</a>
-                        <p>YouTube</p>
-                    </div>
+                <div class="group youtube">
+                    <a href="#" class="social-icon">y</a>
+                    <p class="social-overlay">YouTube</p>
                 </div>
             </div>
 
@@ -307,6 +303,8 @@
             order-1
             flex-grow
             mr-10
+            max-md:w-full
+            max-md:mr-0
         ">
             <h2 class="articles-header">Últimos articulos</h2>
             <article class="article-items">
